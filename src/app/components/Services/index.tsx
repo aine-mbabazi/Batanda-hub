@@ -5,7 +5,7 @@ export default function Services() {
       <section id="services" className="min-h-screen py-24 bg-gray-100 flex items-center justify-center">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-10 text-center">Professional Services</h2>
+            <h2 className="text-4xl font-bold mb-10 text-center text-gray-800 ">Professional Services</h2>
             <p className="text-lg text-gray-700 text-center mb-16 md:text-xl">Expert solutions for your land economics, valuation, and dispute resolution needs</p>
   
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
@@ -16,7 +16,7 @@ export default function Services() {
                   </svg>
                 </div>
                 <div className="p-8 flex flex-col justify-between flex-grow">
-                  <h3 className="text-2xl font-bold mb-4">Valuation Surveying</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Valuation Surveying</h3>
                   <p className="text-gray-600 mb-6 md:text-lg">Comprehensive property valuation services for residential, commercial, and industrial properties. Specializing in complex valuations for legal proceedings and dispute resolution.</p>
                   <Link href="#contact" className="text-red-600 font-medium hover:text-red-700 flex items-center mt-auto">
                     Learn More
@@ -34,7 +34,7 @@ export default function Services() {
                   </svg>
                 </div>
                 <div className="p-8 flex flex-col justify-between flex-grow">
-                  <h3 className="text-2xl font-bold mb-4">Arbitration & ADR</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Arbitration & ADR</h3>
                   <p className="text-gray-600 mb-6 md:text-lg">Professional arbitration services by a registered MCIArb member. Specialized in resolving complex property disputes, landlord-tenant conflicts, and land acquisition disagreements.</p>
                   <Link href="#contact" className="text-red-600 font-medium hover:text-red-700 flex items-center mt-auto">
                     Learn More
@@ -52,8 +52,8 @@ export default function Services() {
                   </svg>
                 </div>
                 <div className="p-8 flex flex-col justify-between flex-grow">
-                  <h3 className="text-2xl font-bold mb-4">Learned Research</h3>
-                  <p className="text-gray-600 mb-6 md:text-lg">Experienced expert witness services for court proceedings related to land and property disputes. Providing professional opinion and evidence to support legal cases.</p>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Learned Research</h3>
+                  <p className="text-gray-600 mb-6 md:text-lg">Peer-reviewed research services focused on housing, urban development, and social equity. Deliverables include academic publications, policy briefs, and technical reports..</p>
                   <Link href="#contact" className="text-red-600 font-medium hover:text-red-700 flex items-center mt-auto">
                     Learn More
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

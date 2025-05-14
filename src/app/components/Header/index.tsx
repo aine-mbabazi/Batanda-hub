@@ -30,6 +30,9 @@ export default function Header() {
             <Link href="#publications" className="nav-link font-medium text-gray-700 hover:text-red-600 relative">
               Publications
             </Link>
+            <Link href="#publications" className="nav-link font-medium text-gray-700 hover:text-red-600 relative">
+              Multimedia
+            </Link>
             <Link href="#contact" className="nav-link font-medium text-gray-700 hover:text-red-600 relative">
               Contact
             </Link>
@@ -57,6 +60,9 @@ export default function Header() {
             </Link>
             <Link href="#publications" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">
               Publications
+            </Link>
+            <Link href="#multimedia" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">
+              Multimedia
             </Link>
             <Link href="#contact" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">
               Contact

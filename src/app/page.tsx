@@ -9,6 +9,8 @@ import Publications from "./components/Publications";
 import Experience from "./components/Experience";
 import Services from "./components/Services";
 import Hero from "./components/Hero";
+import MultimediaGallery from "./components/Multimedia";
+
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Experience/>
       <Services/>
       <Publications/>
+     <MultimediaGallery/> 
+
       <Contact/>
       <Footer/>
     </div>
