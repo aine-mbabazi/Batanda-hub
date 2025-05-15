@@ -12,7 +12,7 @@ interface Publication {
 
 export default function Publications() {
   // All publications data
-  const allPublications: Publication[] = [ // Explicitly type the array
+  const allPublications: Publication[] = [
     {
       title: "The actors' symbiosis in the recurrence of slums after in-situ housing redevelopment initiatives",
       authors: "Mubiru MB and Nankya L (2023)",
@@ -74,9 +74,6 @@ export default function Publications() {
 
   // Get the first 4 publications for the main view
   const featuredPublications = allPublications.slice(0, 4);
-
-  // Get the rest of the publications (after the first 4)
-  const remainingPublications = allPublications.slice(4);
 
   // Function to handle the "View All Publications" button click
   const handleViewAllClick = (e: MouseEvent<HTMLAnchorElement>) => {
