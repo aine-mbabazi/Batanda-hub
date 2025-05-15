@@ -1,58 +1,18 @@
-// export default function Publications() {
-//     return (
-//       <section id="publications" className="min-h-screen py-24 bg-gray-100 flex items-center justify-center">
-//         <div className="container mx-auto px-6">
-//           <div className="max-w-6xl mx-auto">
-//             <h2 className="text-4xl font-bold mb-10 text-center text-gray-800">Publications</h2>
-//             <p className="text-lg text-gray-700 text-center mb-16 md:text-xl">Recent academic contributions to the field of land economics and housing studies</p>
-  
-//             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
-//               <div className="bg-white p-8 rounded-lg shadow-md publication-card">
-//                 <h3 className="text-xl font-bold mb-3 md:text-2xl text-gray-800">Women-headed households and housing location preferences in the informal settlements</h3>
-//                 <p className="text-gray-600 mb-4 md:text-lg">Mubiru, M. B., Nuhu, S., Kombe, W., & Limbumba, T. M. (2022)</p>
-//                 <p className="text-gray-700 md:text-lg">What can we learn from Luzira, Uganda? Habitat International, 127, 102648.</p>
-//               </div>
-  
-//               <div className="bg-white p-8 rounded-lg shadow-md publication-card">
-//                 <h3 className="text-xl font-bold mb-3 md:text-2xl text-gray-800">Housing pathways of female-headed households in the informal settlements of Kampala</h3>
-//                 <p className="text-gray-600 mb-4 md:text-lg">Mubiru, M. B., Nuhu, S., Kombe, W., & Mtwangi Limbumba, T. (2022)</p>
-//                 <p className="text-gray-700 md:text-lg">A qualitative study. Housing Studies, 1-28.</p>
-//               </div>
-  
-//               <div className="bg-white p-8 rounded-lg shadow-md publication-card">
-//                 <h3 className="text-xl font-bold mb-3 md:text-2xl text-gray-800">Quality assurance measures of access systems for tenant retention in high-rise office buildings</h3>
-//                 <p className="text-gray-600 mb-4 md:text-lg">Mubiru, M. B., & Naturinda, J. M. (2023)</p>
-//                 <p className="text-gray-700 md:text-lg">Experiences from building users. Facilities, ahead-of-print.</p>
-//               </div>
-  
-//               <div className="bg-white p-8 rounded-lg shadow-md publication-card">
-//                 <h3 className="text-xl font-bold mb-3 md:text-2xl text-gray-800">Mobility challenges and experiences for students with disabilities in Tanzania universities</h3>
-//                 <p className="text-gray-600 mb-4 md:text-lg">Mubiru, M. B. (2022)</p>
-//                 <p className="text-gray-700 md:text-lg">Dealing with a social inclusion nightmare in property management. Property management.</p>
-//               </div>
-//             </div>
-  
-//             <div className="text-center mt-12">
-//               <a href="#" className="inline-flex items-center text-red-600 font-medium hover:text-red-700 text-lg">
-//                 View All Publications
-//                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-//                 </svg>
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     );
-//   }
-
 'use client';
 
 import { useState } from 'react';
+import type { MouseEvent } from 'react'; // Import MouseEvent
+
+interface Publication {
+  title: string;
+  authors: string;
+  journal: string;
+  url: string;
+}
 
 export default function Publications() {
   // All publications data
-  const allPublications = [
+  const allPublications: Publication[] = [ // Explicitly type the array
     {
       title: "The actors' symbiosis in the recurrence of slums after in-situ housing redevelopment initiatives",
       authors: "Mubiru MB and Nankya L (2023)",
@@ -111,36 +71,36 @@ export default function Publications() {
 
   // State to track whether we're showing all publications or just featured ones
   const [showAllPublications, setShowAllPublications] = useState(false);
-  
+
   // Get the first 4 publications for the main view
   const featuredPublications = allPublications.slice(0, 4);
-  
+
   // Get the rest of the publications (after the first 4)
   const remainingPublications = allPublications.slice(4);
 
   // Function to handle the "View All Publications" button click
-  const handleViewAllClick = (e) => {
+  const handleViewAllClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setShowAllPublications(true);
-    // Scroll to top when showing all publications
-    window.scrollTo(0, 0);
+    // Scroll to the top with smooth behavior
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Function to handle the "Back to Featured" button click
-  const handleBackClick = (e) => {
+  const handleBackClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setShowAllPublications(false);
-    // Scroll to top when going back to featured publications
-    window.scrollTo(0, 0);
+    // Scroll to the top with smooth behavior
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Publication Item component for reuse
-  const PublicationItem = ({ publication }) => (
-    <div className="bg-white p-8 rounded-lg shadow-md publication-card transition-all hover:shadow-lg">
-      <a 
-        href={publication.url} 
-        target="_blank" 
-        rel="noopener noreferrer" 
+  const PublicationItem = ({ publication }: { publication: Publication }) => (
+    <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all">
+      <a
+        href={publication.url}
+        target="_blank"
+        rel="noopener noreferrer"
         className="block hover:no-underline"
       >
         <h3 className="text-xl font-bold mb-3 md:text-2xl text-gray-800 hover:text-red-600 transition-colors">{publication.title}</h3>
@@ -175,8 +135,8 @@ export default function Publications() {
               </div>
 
               <div className="text-center mt-12">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   onClick={handleViewAllClick}
                   className="inline-flex items-center text-red-600 font-medium hover:text-red-700 text-lg"
                 >
@@ -191,18 +151,19 @@ export default function Publications() {
             // All publications view
             <>
               <div className="flex items-center mb-12">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   onClick={handleBackClick}
-                  className="text-red-600 hover:text-red-700 mr-3"
+                  className="text-red-600 hover:text-red-700 mr-3 inline-flex items-center"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                   </svg>
+                  Back to Featured
                 </a>
                 <h2 className="text-4xl font-bold text-gray-800">All Publications</h2>
               </div>
-              
+
               <p className="text-lg text-gray-700 mb-16 md:text-xl">
                 Complete list of academic publications in the field of land economics and housing studies
               </p>
