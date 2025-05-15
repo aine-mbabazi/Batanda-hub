@@ -36,7 +36,7 @@ const Footer = () => {
               <FaEnvelope size={28} />
             </a>
             <a
-              href="https://www.youtube.com/@MosesBMubiru-l8l" // Replace with actual YouTube link
+              href="https://www.youtube.com/@MosesBMubiru-l8l" 
               aria-label="YouTube Channel"
               className="text-white hover:text-pink-500 transition-colors"
               target="_blank"

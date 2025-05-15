@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+
 interface MediaType {
   type: "video" | "image";
   src: string;
@@ -14,18 +15,18 @@ const mediaData: MediaType[] = [
   {
     type: "video",
     src: "/media/PhD_part1 (1).mp4",
-    description: "First part of PhD Defence",
+    description: "PhD Defence on Socioeconomic drivers of housing location choice of female-headed households in Kampala City informal settlements. Full version can be watched on youtube",
   },
   {
     type: "image",
     src: "/media/mubirurotary.jpg",
-    description: "Bustling local market on a sunny day.",
+    description: "Highlights from a rotary meeting in Tanzania",
   },
   {
     type: "video",
     src: "/media/nbsinterview.mp4",
     description: "Interview with a slum redevelopment officer.",
-  },
+  }
 ];
 
 export default function MultimediaGallery() {
@@ -48,7 +49,7 @@ export default function MultimediaGallery() {
             whileHover={{ scale: 1.02 }}
             onClick={() => setSelected(item)}
           >
-            <div className="aspect-w-16 aspect-h-9 relative">
+            <div className="aspect-w-16 aspect-h-9 relative w-full h-full">
               {item.type === "video" ? (
                 <video
                   src={item.src}
@@ -63,7 +64,7 @@ export default function MultimediaGallery() {
                   src={item.src}
                   alt={item.description}
                   fill
-                  className="object-cover rounded-t-md"
+                  className="object-cover object-bottom rounded-t-md"
                 />
               )}
             </div>
