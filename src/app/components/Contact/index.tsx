@@ -20,6 +20,7 @@ function Contact() {
             </div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-3">Address</h3>
             <p className="text-lg text-gray-600">Kampala, Uganda</p>
+            <p className="text-lg text-gray-600">P.O.Box 30601</p>
           </div>
 
           {/* Call Me Section */}

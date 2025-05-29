@@ -35,7 +35,7 @@ export default function Services() {
                 </div>
                 <div className="p-8 flex flex-col justify-between flex-grow">
                   <h3 className="text-2xl font-bold mb-4 text-gray-800">Arbitration & ADR</h3>
-                  <p className="text-gray-600 mb-6 md:text-lg">Professional arbitration services by a registered MCIArb member. Specialized in resolving complex property disputes, landlord-tenant conflicts, and land acquisition disagreements.</p>
+                  <p className="text-gray-600 mb-6 md:text-lg">Professional arbitration services by a registered Arbitrator(MCIArb). Specialized in resolving complex property disputes, landlord-tenant conflicts, and land acquisition disagreements.</p>
                   <Link href="#contact" className="text-red-600 font-medium hover:text-red-700 flex items-center mt-auto">
                     Learn More
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,8 +52,8 @@ export default function Services() {
                   </svg>
                 </div>
                 <div className="p-8 flex flex-col justify-between flex-grow">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Learned Research</h3>
-                  <p className="text-gray-600 mb-6 md:text-lg">Peer-reviewed research services focused on housing, urban development, and social equity. Deliverables include academic publications, policy briefs, and technical reports..</p>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800">Research Projects</h3>
+                  <p className="text-gray-600 mb-6 md:text-lg">Research services focused on housing, urban development, and social equity. Deliverables include academic publications, policy briefs, and technical reports..</p>
                   <Link href="#contact" className="text-red-600 font-medium hover:text-red-700 flex items-center mt-auto">
                     Learn More
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

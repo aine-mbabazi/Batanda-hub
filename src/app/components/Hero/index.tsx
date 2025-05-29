@@ -16,7 +16,7 @@ export default function Hero() {
           {/* Left column: Text content */}
           <div className="w-full lg:w-3/5 text-center lg:text-left mb-12 lg:mb-6">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              Dr. Moses Batanda Mubiru
+              Dr. Moses Batanda Mubiru (PhD), MCIArb
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-10">
               Land Economist | Valuation Surveyor | Registered
