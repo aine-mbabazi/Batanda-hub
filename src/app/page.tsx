@@ -10,6 +10,7 @@ import Experience from "./components/Experience";
 import Services from "./components/Services";
 import Hero from "./components/Hero";
 import MultimediaGallery from "./components/Multimedia";
+import { Suspense } from "react";
 
 
 export default function Home() {
@@ -20,7 +21,9 @@ export default function Home() {
       <Experience/>
       <Services/>
       <Publications/>
-     <MultimediaGallery/> 
+      <Suspense fallback={'loading...'}>
+        <MultimediaGallery/> 
+      </Suspense>
 
       <Contact/>
       <Footer/>
