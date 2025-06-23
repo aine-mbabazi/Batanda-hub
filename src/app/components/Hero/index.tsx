@@ -16,11 +16,11 @@ export default function Hero() {
           {/* Left column: Text content */}
           <div className="w-full lg:w-3/5 text-center lg:text-left mb-12 lg:mb-6">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              Dr. Moses Batanda Mubiru (PhD), MCIArb
+              Dr. Moses Batanda Mubiru (PhD),RSU,MCIArb
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-10">
               Land Economist | Valuation Surveyor | Registered
-              <br className="hidden md:block" /> Arbitrator | Academic Researcher
+              <br className="hidden md:block" /> Arbitrator | Researcher | Housing Consultant
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <Link
@@ -36,7 +36,7 @@ export default function Hero() {
                 View Services
               </Link>
               <Link
-                href="/images/cv-mubiru.pdf"
+                href="/media/mubiruCV.pdf"
                 download
                 className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 text-lg"
               >
